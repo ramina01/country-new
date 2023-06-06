@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root{
+  --dark-bg-color: hsl(207, 26%, 17%);
+  --article-color:  hsl(209, 23%, 22%);
+  --text-color: white;
+  --light-mode-text:hsl(200, 15%, 8%);
+  --light-mode-input:hsl(0, 0%, 52%);
+  --light-mode-background:hsl(0, 0%, 98%);
+}
+
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+
+}
+
+/* img {
+max-width: 100%;
+} */
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  /* padding: 20px; */
+  /* background-color: hsl(0, 0%, 98%); */
+  /* color: hsl(200, 15%, 8%); */
+  background-color: var(--dark-bg-color);
+  color: var(--text-color);
+}
+
+body.light-theme{
+  background-color: var( --light-mode-background);
+  color: var( --light-mode-text);
+}
+
+/*///////////////////// header ///////////////////*/
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:  var(--article-color);
+  padding: 10px 20px;
+ box-shadow:  0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header.light-theme{
+  background-color: var( --text-color);
+  color: var( --light-mode-text);
+}
+.header.darkMode-button .light-theme{
+  color: var( --light-mode-text);
+}
+.header .darkMode-button{
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  
+}
+.header .mode-button {
+  display: inline;
+  padding-left: 4px;
+  cursor: pointer;
+  
+}
+
+
+/*///////////////////// Filter ///////////////////*/
+.filter{
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: space-between;
+  padding: 20px ;
+}
+
+.filter .form-control{
+  width: 100%;
+}
+.filter .form-control input{
+  background-color:var(--article-color);
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-family: inherit;
+  width: 100%;
+  margin: 0 0 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.filter .form-control input.light-theme{
+  background-color: var( --text-color);
+  
+}
+
+.filter .form-control input ::placeholder {
+color: white;
+
+}
+
+
+.filter .region-filter .select{
+  background-color: var(--article-color);
+  color: var(--text-color);
+  font-family: inherit;
+  padding: 12px;
+  border: none;
+ width: 200px;
+ border-radius: 5px;
+ margin-left: 20px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#select.light-theme{
+  background-color: var( --text-color);
+  color: var(--light-mode-text);
+  
+}
+
+/*///////////////////// grid ///////////////////*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 20px;
+}
+.grid .card {
+  /* background-color: white; */
+  background-color: var(--article-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+height: 100%;
+  max-width: fit-content;
+  
+    margin: auto;
+
+}
+
+.grid .card .details .high {
+  color: chartreuse;
+}
+
+.grid .card.light-theme {
+  background-color: var(--text-color);
+}
+
+.grid .aroundCard{
+height: 300px;
+width: 260px;
+
+}
+
+.grid .card img{
+  border-radius: 5px 5px 0 0;
+  padding: 0px ;
+
+  height: 230px;
+  object-fit:fill;
+ 
+  
+}
+
+.grid .card .details{
+  padding: 20px 20px 30px 20px; 
+  border-radius: 5px;
+  max-width: fit-content;
+}
+.grid .card .details h3{
+  padding-bottom: 12px;
+}
+
+.grid .card .details h4{
+  padding-bottom: 3px;
+  font-weight: 600;
+}
+.grid .card .details h4 span{
+  font-weight: 300;
+}
+
+@media (min-width: 500px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  
+}
+
+@media (min-width: 800px){
+  .filter{
+    flex-direction: row;
+  }
+  .filter .form-control{
+    width: auto;
+  }
+  .filter .form-control input{
+    width: auto;
+    margin: 0;
+  }
+  /* .filter .region-filter{
+    width: auto;
+  } */
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px){
+
+  .grid{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+  }
+ 
+}
+  
