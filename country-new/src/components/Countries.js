@@ -85,7 +85,7 @@ const Countries = () => {
     
  
     const highlight=(key, term)=>{
-      console.log('called from highlight ', {key, term});
+     // console.log('called from highlight ', {key, term});
       let highlightedTerm = key;
       if(term){
         highlightedTerm =  key.replace((new RegExp(term, "gi")), `<mark>${term}</mark>` ); 
@@ -102,7 +102,7 @@ const Countries = () => {
   { countries.filter(country=>((country.name.toLowerCase().includes(searchName.toLowerCase()) || searchName ==='' )&&
       (country.region.toLowerCase().includes(filterRegion.toLocaleLowerCase())   || filterRegion==='') )).map((country)=>{
     const {name, population, region, capital , flag} = country 
-    console.log('am called from map ')
+    //console.log('am called from map ')
     return <article key={country.name} onClick={()=>{cardClickHandler(country)}}> 
         <div className='aroundCard'>
             
