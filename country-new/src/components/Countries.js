@@ -83,7 +83,7 @@ const Countries = () => {
       country.region.toLowerCase().includes(filterRegion.toLocaleLowerCase())   || filterRegion==='' )));
     }, [filterRegion])
     
-
+ 
     const highlight=(key, term)=>{
       console.log('called from highlight ', {key, term});
       let highlightedTerm = key;
