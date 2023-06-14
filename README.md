@@ -1,4 +1,5 @@
 # country-new
+This project is built using React JS, CSS, Bootstrap, HTML.
 The goal of this project was to build a frontend application that retrieves data from a country API
 and present it in a user-friendly way.
 The application allows users to search for a country by name and display information such as the country's name,
